@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ 	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Program | Frontiers in Correlated Quantum Matter</title>
+<link href="sty2.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+function slideSwitch() {
+   var $active = $('#slideshow div.active');
+   if ( $active.length == 0 ) $active = $('#slideshow div:last');
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow div:first');
+   $active.addClass('last-active');
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+           $active.removeClass('active last-active');
+      });
+}
+$(function() {
+   setInterval( "slideSwitch()", 10000 );
+});
+</script>
+
+<style>
+/* ===== Program table styling ===== */
+.program-day{
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  padding-bottom: 10px;
+  border-bottom: 4px solid rgba(0,0,0,0.08);
+}
+
+.program-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.program-table td, .program-table th{
+  border: 2px solid rgba(0,0,0,0.35);
+  padding: 14px 16px;
+  vertical-align: top;
+}
+
+.program-time{
+  width: 170px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.row-strong{
+  background: #cfd6d6; /* Opening行の薄いグレー */
+  font-weight: 700;
+}
+
+.row-top{
+  background: #6f7f83; /* Registration行の濃いグレー */
+  color: #fff;
+  font-weight: 800;
+}
+
+.row-session{
+  background: #dff3ee; /* Session帯の薄いミント */
+  font-weight: 900;
+}
+
+.program-speaker{
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.program-affil{
+  font-style: italic;
+  margin-left: 14px;
+  font-size: 16px;
+}
+
+.program-title{
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.row-break{
+  background: #ffffff;
+  font-style: italic;
+}
+
+/* ===== Poster session table ===== */
+.poster-title{
+  margin-top: 28px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  padding-bottom: 10px;
+  border-bottom: 4px solid rgba(0,0,0,0.08);
+}
+
+.poster-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.poster-table td{
+  border: 2px solid rgba(0,0,0,0.35);
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+.poster-id{
+  width: 90px;
+  text-align: center;
+  background: #dff3ee; /* 画像の薄いミント系 */
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.poster-speaker{
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.poster-affil{
+  font-style: italic;
+  margin-left: 14px;
+  font-size: 16px;
+}
+
+.poster-talktitle{
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+  <img src="cds-logo.svg" class="site-logo logo-left" alt="CDS">
+  <img src="QUAST_logo.png" class="site-logo logo-right" alt="QUAST">
+
+  <div id="slideshow">
+  </div>
+</div><!-- end .header -->
+
+<div class="sidebar1">
+  <ul class="nav">
+    <li><a href="index.html">Overview</a></li>
+    <li><a href="Registration.html">Registration</a></li>
+    <li><a href="Program.html" class="active">Program</a></li>
+    <li><a href="Invited.html">Invited Speakers</a></li>
+    <li><a href="Venue.html">Venue</a></li>
+  </ul>
+  <p>　</p><p>　</p><p>　</p><p>　</p><p>　</p><p>　</p><p>　</p>
+  <p>　</p><p>　</p><p>　</p><p>　</p><p>　</p><p>　</p><p>　</p>
+</div><!-- end .sidebar1 -->
+
+<div class="content">
+
+  <div class="program-day">November 24</div>
+
+  <table class="program-table">
+    <tr class="row-top">
+      <td class="program-time">9:00-9:20</td>
+      <td>Registration</td>
+    </tr>
+
+    <tr class="row-strong">
+      <td class="program-time">9:20-9:30</td>
+      <td>Opening</td>
+    </tr>
+
+    <tr class="row-session">
+      <td colspan="2">Session 1</td>
+    </tr>
+
+    <tr>
+      <td class="program-time">9:30-10:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Roser Valent&iacute;</span>
+          <span class="program-affil">Goethe Univ. Frankfurt</span>
+        </div>
+        <div class="program-title">The rich world of van der Waals heterostructures: from quantum spin liquids to heavy fermions</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">10:10-10:40</td>
+      <td>
+        <div>
+          <span class="program-speaker">Yukitoshi Motome</span>
+          <span class="program-affil">Univ. Tokyo</span>
+        </div>
+        <div class="program-title">Quantum spin liquids and their material design</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">10:40-11:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Takasada Shibauchi</span>
+          <span class="program-affil">Univ. Tokyo</span>
+        </div>
+        <div class="program-title">Thermodynamic evidence for Majorana excitations in Kitaev spin liquid materials</div>
+      </td>
+    </tr>
+
+    <tr class="row-session">
+      <td colspan="2">Session 2</td>
+    </tr>
+
+    <tr>
+      <td class="program-time">13:30-14:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Karsten Held</span>
+          <span class="program-affil">TU Wien</span>
+        </div>
+        <div class="program-title">Entanglement in the Hubbard model from cuprates to cold atom simulations</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">14:10-14:40</td>
+      <td>
+        <div>
+         <div>
+          <span class="program-speaker">Kazuhiko Kuroki</span>
+          <span class="program-affil">Univ. Osaka</span>
+        </div>
+        <div class="program-title">Theoretical study on the pairing mechanism of a high T<SUB>c</SUB> superconductor La<SUB>3</SUB>Ni<SUB>2</SUB>O<SUB>7</SUB> and related multilayer materials</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">14:40-15:10</td>
+      <td>
+        <div>
+          <div>
+            <span class="program-speaker">Ryotaro Arita</span>
+            <span class="program-affil">Univ. Tokyo/RIKEN</span>
+          </div>
+          <div class="program-title">Hidden Fermions Behind the Pseudogap and Superconductivity in the Bilayer Hubbard Model: A Dynamical Cluster Approximation Study</div>
+	</td>
+      </tr>
+      
+    <tr class="row-session">
+      <td colspan="2">Session 3</td>
+    </tr>
+
+    <tr>
+      <td class="program-time">15:50-16:30</td>
+      <td>
+        <div>
+          <span class="program-speaker">Alessandro Toschi</span>
+          <span class="program-affil">TU Wien</span>
+        </div>
+        <div class="program-title">Fluctuation diagnostics of many-electron systems with local and non-local interactions</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">16:30-17:00</td>
+      <td>
+        <div>
+         <div>
+          <span class="program-speaker">Tetsuo Hanaguri</span>
+          <span class="program-affil">RIKEN</span>
+        </div>
+        <div class="program-title">Quasiparticle dispersions revealed by ultrahigh-resolution quasiparticle interference imaging</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">17:00-17:30</td>
+      <td>
+        <div>
+         <div>
+          <span class="program-speaker">Takeshi Kondo</span>
+          <span class="program-affil">Univ. Tokyo</span>
+        </div>
+        <div class="program-title">Magnetic topological phases in rare-earth monopnictides unveiled by ARPES</div>
+      </td>
+    </tr>
+
+    </table>
+
+  <!-- ここに November 25 / 26 も同じ形式で追加できます -->
+ <div class="program-day">November 25</div>
+
+   <table class="program-table">
+
+    <tr class="row-session">
+      <td colspan="2">Session 4</td>
+    </tr>
+
+    <tr>
+      <td class="program-time">9:30-10:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Tim Wehling</span>
+          <span class="program-affil">Hamburg Univ. </span>
+        </div>
+        <div class="program-title">Currents in correlated superconductors</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">10:10-10:40</td>
+      <td>
+        <div>
+          <span class="program-speaker">Youichi Yanase</span>
+          <span class="program-affil">Kyoto Univ. </span>
+        </div>
+        <div class="program-title">Theory of superconducting parity transition: CeRh<SUB>2</SUB>As<SUB>2</SUB> and beyond</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">10:40-11:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Kentaro Nomura</span> 
+          <span class="program-affil">Kyushu Univ. </span>
+        </div>
+        <div class="program-title">Topological spintronic functionalities in magnetic Weyl semimetals</div>
+      </td>
+    </tr>
+
+    <tr class="row-session">
+      <td colspan="2">Session 5</td>
+    </tr>
+
+    <tr>
+      <td class="program-time">13:30-14:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Uwe Bovensiepen</span>
+          <span class="program-affil">Univ. Duisburg-Essen</span>
+        </div>
+        <div class="program-title">Ultrafast Electronic Structure Engineering in 1T-TaS2 : Role of Doping and Amplitude Mode Dynamic </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">14:10-14:50</td>
+      <td>
+        <div>
+         <div>
+          <span class="program-speaker">Thomas Sch&auml;fer</span>
+          <span class="program-affil">Univ. Trieste </span>
+        </div>
+        <div class="program-title">The whole is greater than the sum of its parts – a multimethod, multimessenger perspective on the quantum many-body problem</div>
+      </td>
+    </tr>
+
+    <tr class="row-session">
+      <td colspan="2">Poster Session (15:10-17:30)</td>
+    </tr>
+
+    </table>
+
+     <!-- ここに November 25 / 26 も同じ形式で追加できます -->
+ <div class="program-day">November 26</div>
+
+   <table class="program-table">
+
+    <tr class="row-session">
+      <td colspan="2">Session 6</td>
+    </tr>
+
+    <tr>
+      <td class="program-time">9:30-10:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Giorgio Sangiovanni</span>
+          <span class="program-affil">Julius Maximilians Univ. Wuerzburg</span>
+        </div>
+        <div class="program-title">Kagome metals, a platform for many-body physics</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">10:10-10:40</td>
+      <td>
+        <div>
+	  <span class="program-speaker">Satoru Nakatsuji</span>
+          <span class="program-affil">Univ. Tokyo</span>
+         </div>
+        <div class="program-title">Correlation driven phenomena in topological flat bands</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">10:40-11:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Hiroshi Kontani </span> 
+          <span class="program-affil">Nagoya Univ. </span>
+        </div>
+        <div class="program-title">Nematic and chiral superconductivity in of kagome metals</div>
+      </td>
+    </tr>
+
+    <tr class="row-session">
+      <td colspan="2">Session 7</td>
+    </tr>
+
+    <tr>
+      <td class="program-time">13:30-14:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Martin Eckstein</span>
+          <span class="program-affil">Hamburg Univ.</span>
+        </div>
+        <div class="program-title">Floquet X-Ray Scattering as a Probe of Hidden Electronic Order</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">14:10-14:40</td>
+      <td>
+        <div>
+          <span class="program-speaker">Naoto Tsuji</span>
+          <span class="program-affil">Univ. Tokyo</span>
+        </div>
+         <div class="program-title">Type II Lifshitz invariant in time-reversal symmetry broken superconductors</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">14:40-15:10</td>
+      <td>
+        <div>
+          <span class="program-speaker">Tsuyoshi Kimura</span> 
+          <span class="program-affil">Univ. Tokyo</span>
+        </div>
+        <div class="program-title">Nonreciprocal optical phenomena in time-reversal-broken antiferromagnets under an electric field</div>   
+      </td>
+      </tr>
+      
+    <tr class="row-session">
+      <td colspan="2">Session 8</td>
+    </tr>
+
+    <tr>
+      <td class="program-time">15:50-16:30</td>
+      <td>
+        <div>
+          <span class="program-speaker">Philipp Werner </span>
+          <span class="program-affil">Univ. Fribourg</span>
+        </div>
+        <div class="program-title">Superconductivity in nonequilibrium steady states</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">16:30-17:00</td>
+      <td>
+        <div>
+         <span class="program-speaker">Ryo Shimano</span>
+          <span class="program-affil">Univ. Tokyo</span>
+        </div>
+        <div class="program-title">Terahertz probe of hidden superconducting coherence in the stripe phase of a high-Tc cuprate superconductor</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="program-time">17:00-17:30</td>
+      <td>
+        <div>
+         <div>
+          <span class="program-speaker">Kensuke Kobayashi</span>
+          <span class="program-affil">Univ. Tokyo</span>
+         </div>
+        <div class="program-title">Exploring Condensed Matter Physics with a Quantum Spin Microscope</div>
+      </td>
+    </tr>  
+
+    <tr class="row-strong">
+      <td class="program-time">17:30-17:40</td>
+      <td>Closing</td>
+    </tr>
+    </table>
+
+</table>
+
+  <div class="poster-title">Poster Session (15:10–17:30, November 25)</div>
+
+  <table class="poster-table">
+
+    <tr>
+
+    <tr>
+      <td class="poster-id">P-1</td>
+      <td>
+        <div>
+          <span class="poster-speaker">- </span>
+          <span class="poster-affil">- </span>
+        </div>
+        <div class="poster-talktitle">
+          -
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="poster-id">P-2</td>
+      <td>
+        <div>
+          <span class="poster-speaker">- </span>
+          <span class="poster-affil">- </span>
+        </div>
+        <div class="poster-talktitle">
+          -
+        </div>
+      </td>
+    </tr>
+
+  </table>
+    
+</div><!-- end .content -->
+
+<?php include 'footer.html'; ?>
+
+</div><!-- end .container -->
+
+</body>
+</html>

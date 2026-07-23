@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Frontiers in Correlated Quantum Matter</title>
+<link href="sty2.css" rel="stylesheet" type="text/css" />
+<!-- script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js" -->
+<script type="text/javascript" src="jquery-1.11.3.min.js">
+</script>
+<script type="text/javascript">
+function slideSwitch() {
+   var $active = $('#slideshow div.active');
+
+   if ( $active.length == 0 ) $active = $('#slideshow div:last');
+
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow div:first');
+
+   $active.addClass('last-active');
+
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+           $active.removeClass('active last-active');
+      });
+}
+
+$(function() {
+   setInterval( "slideSwitch()", 10000 );
+});
+</script>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+  <img src="cds-logo.svg" class="site-logo logo-left" alt="CDS">
+  <img src="QUAST_logo.png" class="site-logo logo-right" alt="QUAST">
+
+  <div id="slideshow">
+  </div>
+
+</div><!-- end .header -->
+
+<div class="sidebar1">
+      <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="Registration.html">Registration</a></li>
+      <li><a href="Program.html">Program</a></li>
+      <li><a href="Invited.html">Invited Speakers</a></li>
+      <li><a href="Venue.html">Venue</a></li>
+    </ul>
+    <p>　</p>
+    <p>　</p>	
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+</div>
+<!-- end .sidebar1 -->
+<!-- ####################################### -->
+<!-- ##### CONTENTS ######################## -->
+<!-- ####################################### -->
+<div class="content">
+    <h2>CDS × QUAST Joint Workshop<br>Frontiers in Correlated Quantum Matter</h2>
+      <p class="event-date">
+	Novemver 24&ndash;26, 2026 <br> University of Tokyo
+      </p>
+
+	<div style="text-align:center;">
+	  <img src="Yasuda.jpg" alt="Clock Tower" width="300">
+        </div>
+	    
+      <h3>Overview</h3>
+    <div class="maintxt">
+  <p>
+    The joint workshop "Frontiers in Correlated Quantum Matter" brings together two major research initiatives in correlated electron physics: Correlation Design Science (CDS), a Grant-in-Aid for Transformative Research Areas (A) project in Japan, and QUAST (Quantitative Spatio-Temporal Model-Building for Correlated Electronic Matter), a collaborative research program supported by the DFG (Germany), SNSF (Switzerland), and FWF (Austria). By uniting these complementary efforts, the workshop aims to accelerate progress in understanding, modeling, and ultimately designing emergent phenomena in strongly correlated quantum systems.<br>
+
+    The workshop will cover frontier topics including superconductors, quantum magnets, strange and non-Fermi-liquid metals, topological and topology-driven phases, and nonequilibrium correlated systems. Particular emphasis will be placed on methodological advances—such as first-principles approaches, many-body theory, numerical simulations, and data-driven modeling—as well as on their application to real materials and experimentally relevant situations. By bringing together diverse perspectives, the workshop seeks to identify unifying concepts and transferable techniques across different subfields of correlated quantum matter.
+  </br>
+  </p>  
+    </div>
+    
+
+     <h3>Organizers</h3>
+	<p>
+	  Ryotaro Arita (Univ. Tokyo/RIKEN), Tsuyoshi Kimura (Univ. Tokyo), <br>
+	    Giorgio Sangiovanni (Julius Maximilians Univ. Wuerzburg), Tim Wehling (Hamburg Univ.), <br>
+	      Roser Valent&iacute; (Goethe Univ. Frankfurt)
+        </p>
+
+<!-- end .content -->
+</div>
+<!-- ########## footer ############################# -->
+  <?php include 'footer.html'; ?>
+  <!-- ########## footer ############################# -->
+<!-- end .container --></div>
+<!-- ####################################### -->
+<!-- ####################################### -->
+
+</body>
+</html>

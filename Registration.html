@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registration | Frontiers in Correlated Quantum Matter</title>
+<link href="sty2.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="jquery-1.11.3.min.js">
+</script>
+
+<script type="text/javascript">
+function slideSwitch() {
+   var $active = $('#slideshow div.active');
+   if ( $active.length == 0 ) $active = $('#slideshow div:last');
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow div:first');
+   $active.addClass('last-active');
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+           $active.removeClass('active last-active');
+      });
+}
+$(function() {
+   setInterval( "slideSwitch()", 10000 );
+});
+</script>
+
+<style>
+/* ===== Registration page styling ===== */
+
+.reg-section h3{
+  margin-top: 30px;
+}
+
+.deadlines, .fees{
+  margin-left: 40px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.deadlines .date,
+.fees .price{
+  font-weight: bold;
+}
+
+.notes{
+  margin-top: 25px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.register-area{
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.register-btn{
+  display: inline-block;
+  padding: 20px 60px;
+  font-size: 26px;
+  font-weight: bold;
+  background: #4d7cff;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.register-btn:hover{
+  background: #243447;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+  <img src="cds-logo.svg" class="site-logo logo-left" alt="CDS">
+  <img src="QUAST_logo.png" class="site-logo logo-right" alt="QUAST">
+
+  <div id="slideshow">
+  </div>
+
+</div><!-- end .header -->
+
+
+<div class="sidebar1">
+      <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="Registration.html" class="active">Registration</a></li>
+      <li><a href="Program.html">Program</a></li>
+      <li><a href="Invited.html">Invited Speakers</a></li>
+      <li><a href="Venue.html">Venue</a></li>
+    </ul>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+</div>
+
+<div class="content">
+
+    <div class="reg-section">
+
+      <h3>Deadlines:</h3>
+      <div class="deadlines">
+        Registration for poster presentation :
+        <span class="date">September 24th, 2026 (Thu)</span><br />
+        Abstract submission :
+        <span class="date">September 24th, 2026 (Thu)</span><br />
+        Registration for participation only :
+        <span class="date">October 15th, 2026 (Thu)</span>
+      </div>
+      <div class="notes">
+      <a href="abstract_template.docx">* Click to download the Abstract template (Microsoft Word).</a>
+      </div>
+      
+      <h3>Fees:</h3>
+      <div class="fees">
+        Registration : <span class="price">Free</span><br />
+        Banquet : <span class="price">JPY 10,000</span>
+      </div>
+
+      <div class="notes">
+        * Please pay the banquet fee at the on-site registration desk.<br />
+        * Cancellations made after 13:00 on October 15th:
+        A 100% cancellation fee will be charged.
+      </div>
+
+      <div class="register-area">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNoy8B3Le5QaHZBMTuO7jmSIn20Hyg4aISPBAn2t7NqdoJAA/viewform?usp=dialog"
+           target="_blank"
+           class="register-btn">
+           Register
+        </a>
+      </div>
+    </div>
+
+</div><!-- end .content -->
+
+
+<?php include 'footer.html'; ?>
+
+</div><!-- end .container -->
+
+</body>
+</html>
+

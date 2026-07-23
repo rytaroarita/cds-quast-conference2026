@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Invited Speakers | Frontiers in Correlated Quantum Matter</title>
+<link href="sty2.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="jquery-1.11.3.min.js">
+</script>
+
+<script type="text/javascript">
+function slideSwitch() {
+   var $active = $('#slideshow div.active');
+   if ( $active.length == 0 ) $active = $('#slideshow div:last');
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow div:first');
+   $active.addClass('last-active');
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+           $active.removeClass('active last-active');
+      });
+}
+$(function() {
+   setInterval( "slideSwitch()", 10000 );
+});
+</script>
+
+<style>
+
+.reg-section h3{
+  margin-top: 30px;
+}
+
+.deadlines, .fees{
+  margin-left: 40px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.deadlines .date,
+.fees .price{
+  font-weight: bold;
+}
+
+.notes{
+  margin-top: 25px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.register-area{
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.register-btn:hover{
+  background: #243447;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+  <img src="cds-logo.svg" class="site-logo logo-left" alt="CDS">
+  <img src="QUAST_logo.png" class="site-logo logo-right" alt="QUAST">
+
+  <div id="slideshow">
+  </div>
+
+</div><!-- end .header -->
+
+
+<div class="sidebar1">
+      <ul class="nav">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="Registration.html" class="active">Registration</a></li>
+      <li><a href="Program.html">Program</a></li>
+      <li><a href="Invited.html">Invited Speakers</a></li>
+      <li><a href="https://www.s.u-tokyo.ac.jp/en/hall/koshiba.html">Venue</a></li>
+    </ul>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+    <p>　</p>
+</div>
+
+<div class="content">
+
+    <div class="reg-section">
+
+      <h3>November 24</h3>
+      <div class="deadlines">
+	9:20-9:30 &nbsp;&nbsp;&nbsp; Opening<br/>
+	9:30-10:10 <br/>
+	10:10-10:40 <br/>
+	10:40-11:10 <br/>
+	<BR/>
+	13:30-14:10 <br/>
+	14:10-14:40 <br/>
+	14:40-15:10 <br/>	  
+	<BR/>
+	15:50-16:30 <br/>
+	16:30-17:00 <br/>
+	17:00-17:30 <br/>	  
+      </div> 
+
+      <h3>November 25</h3>
+      <div class="deadlines">
+	9:30-10:10 <br/>
+	10:10-10:40 <br/>
+	10:40-11:10 <br/>
+	<BR/>
+	13:30-14:10 <br/>
+	14:10-14:50 <br/>
+	<BR/>
+	15:10-17:40 &nbsp;&nbsp;&nbsp; Poster Session<br/>
+      </div>
+      
+      <h3>November 26</h3>
+      <div class="deadlines">
+	9:30-10:10  <br/>
+	10:10-10:40 <br/>
+	10:40-11:10 <br/>
+	<BR/>
+	13:30-14:10 <br/>
+	14:10-14:40 <br/>
+	14:40-15:10 <br/>	  
+	<BR/>
+	15:50-16:30 <br/>
+	16:30-17:00 <br/>
+	17:00-17:30 <br/>
+	17:30-17:40 &nbsp;&nbsp;&nbsp; Closing<br/>
+      </div>
+
+    </div>
+
+</div><!-- end .content -->
+
+
+<?php include 'footer.html'; ?>
+
+</div><!-- end .container -->
+
+</body>
+</html>
+

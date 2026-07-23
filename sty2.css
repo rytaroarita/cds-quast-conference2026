@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+/* =========================================================
+   Modernized theme for the existing XHTML layout
+   - Keep HTML unchanged
+   - Lighter background, card container, softer sidebar
+   - Better typography & spacing
+   ========================================================= */
+
+/* ----- Base / Variables ----- */
+:root{
+  --bg: #eef2f5;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #52606d;
+
+  --accent: #0ea5a4;         /* teal accent (safe + modern) */
+  --accent-2: #2c7be5;       /* optional blue */
+  --border: rgba(31,41,51,0.12);
+
+  --sidebar: #f1f3f5;
+  --nav-bg: #e9ecef;
+  --nav-hover: #17184b;
+
+  --radius: 10px;
+  --shadow: 0 6px 24px rgba(0,0,0,0.10);
+}
+
+/* ----- Page ----- */
+html, body{
+  height: 100%;
+}
+
+body{
+  font: 16px/1.75 "Hiragino Kaku Gothic Pro", "Yu Gothic", Meiryo, Osaka, Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+}
+
+/* Remove default list spacing quirks */
+ul, ol, dl{
+  padding: 0;
+  margin: 0;
+}
+
+a img{
+  border: none;
+}
+
+/* Links */
+a:link{
+  color: var(--accent-2);
+  text-decoration: none;
+}
+a:visited{
+  color: #476fbe;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus{
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Headings / paragraphs spacing (existing HTML uses h2 + h3 heavily) */
+h1, h2, h4, h5, h6, p{
+  margin-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+h3{
+  margin-top: 26px;
+  margin-bottom: 10px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* ----- Container as a centered “card” ----- */
+.container{
+  width: 1000px;          /* keeps your current layout */
+  max-width: calc(100% - 32px);
+  background: var(--card);
+  margin: 28px auto;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ----- Header ----- */
+/* ===== Header base ===== */
+.header{
+  position: relative;
+  min-height: unset; /* ロゴが確実に収まる高さ */
+  padding: 14px 20px 18px 20px;
+  background: linear-gradient(90deg,
+    rgba(14,165,164,0.18),
+    rgba(44,123,229,0.10)
+  );
+  border-bottom: 1px solid rgba(31,41,51,0.12);
+}
+
+/* ===== Common logo style ===== */
+.site-logo{
+  position: absolute;
+  top: 15px;
+  height: 90px;      /* 基本サイズ */
+  width: auto;
+  z-index: 50;       /* slideshow より前面 */
+}
+
+/* 左上（JPEG） */
+.logo-left{
+    top: 25px;
+    height: 80px;
+    left: 300px;
+}
+
+/* 右上（PNG） */
+.logo-right{
+    top: 15px;
+    height: 100px;
+    right: 300px;
+}
+
+.event-date{
+  text-align: right;
+  font-size: 18px;
+  color: #334155;
+  margin-top: 12px;
+}
+
+/* ===== Slideshow stays below logos ===== */
+#slideshow{
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+/* ===== Responsive (optional) ===== */
+@media (max-width: 768px){
+  .site-logo{
+    height: 52px;
+    top: 10px;
+  }
+}
+
+/* ----- Layout columns ----- */
+.sidebar1{
+  float: left;
+  width: 170px;
+  background: transparent;
+  overflow: hidden;
+  height: auto;                /* IMPORTANT: remove fixed height */
+  padding: 14px 10px 18px 10px;
+  border-right: 1px solid var(--border);
+}
+
+.content{
+  float: left;
+  width: calc(100% - 170px);
+  padding: 22px 26px 28px 26px;
+  background: var(--card);
+  box-sizing: border-box;
+}
+
+/* Old helper class in your HTML */
+.maintxt{
+  margin-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+  color: var(--text);
+}
+.maintxt p{
+  color: var(--text);
+}
+
+/* Content lists */
+.content ul, .content ol{
+  padding: 0 0 0 22px;
+  margin: 8px 0 18px 0;
+}
+.content li{
+  margin: 6px 0;
+}
+
+/* ----- Title area styling ----- */
+.content h2{
+  font-size: 30px;
+  line-height: 1.25;
+  margin: 0 0 14px 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: rgba(14,165,164,0.12);
+  border: 1px solid rgba(14,165,164,0.20);
+}
+
+.content h3{
+  font-size: 20px;
+  margin-top: 22px;
+  padding: 0 0 8px 0;
+  border-bottom: 2px solid rgba(31,41,51,0.10);
+}
+
+/* Red notice line in your HTML uses <font color="red">... */
+.content font[color="red"]{
+  color: #b91c1c !important;
+  font-weight: 700;
+}
+
+/* ----- Navigation ----- */
+ul.nav{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.nav li{
+  border: none;
+  margin: 0 0 10px 0;
+}
+
+/* Button-like nav links */
+ul.nav a, ul.nav a:visited{
+  display: block;
+  width: auto;
+  text-decoration: none;
+  background: var(--nav-bg);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(31,41,51,0.10);
+  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus{
+  background: var(--nav-hover);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(23,24,75,0.18);
+  transform: translateY(-1px);
+}
+
+/* ----- Footer ----- */
+.footer{
+  padding: 14px 26px;
+  background: #f3f5f7;
+  position: relative;
+  clear: both;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Float helpers (keep) */
+.fltrt{ float: right; margin-left: 8px; }
+.fltlft{ float: left; margin-right: 8px; }
+.clearfloat{ clear: both; height: 0; font-size: 1px; line-height: 0; }
+
+/* ----- Slideshow (keep your JS behavior) ----- */
+/* Your HTML shows slideshow images are 1000px wide; make it responsive */
+#slideshow{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+}
+
+#slideshow div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  opacity: 0.0;
+  margin: 0;
+  background-color: transparent;
+  height: 100px;
+}
+
+#slideshow div.active{
+  z-index: 10;
+  opacity: 1.0;
+}
+
+#slideshow div.last-active{
+  z-index: 9;
+}
+
+#slideshow div img{
+  width: 100%;
+  height: 300px;
+  display: block;
+  border: 0;
+  margin: 0;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+/* ----- Responsive tweak ----- */
+@media (max-width: 820px){
+  .container{
+    width: auto;
+    margin: 14px auto;
+    border-radius: 12px;
+  }
+  .sidebar1{
+    float: none;
+    width: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .content{
+    float: none;
+    width: auto;
+    padding: 18px 18px 22px 18px;
+  }
+  #slideshow, #slideshow div, #slideshow div img{
+    height: 220px;
+  }
+}
+
+/* ----- Print (optional but helpful for programs) ----- */
+@media print{
+  body{ background: #fff; }
+  .container{ box-shadow: none; margin: 0; border-radius: 0; }
+  .sidebar1{ display: none; }
+  .content{ width: 100%; float: none; }
+  #slideshow{ display: none; }
+}
+/* ---- FIX: float drop & huge blank space in sidebar ---- */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* sidebar width includes padding now */
+.sidebar1{
+  width: 170px;           /* このままでOK */
+  padding: 14px 10px 18px 10px;
+}
+
+/* content really becomes "100% - sidebar" */
+.content{
+  width: calc(100% - 170px);
+}
+
+/* remove the artificial vertical spacer <p>　</p> in sidebar */
+.sidebar1 p{
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  height: 0;
+}
